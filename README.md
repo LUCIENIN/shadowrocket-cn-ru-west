@@ -1,4 +1,18 @@
-# Shadowrocket 中国、俄罗斯与欧美分流
+# Shadowrocket CN / RU / West — 中国、俄罗斯与欧美分流
+
+**Shadowrocket CN/RU/West** 是不含代理节点和订阅凭据的地区分流模板，面向同时使用中国软件、俄罗斯服务和欧美站点的用户。国内服务走 DIRECT，Ozon/Mail.ru 等走 RUSSIA，欧美业务使用独立策略组，GEOIP 只作后备判断。
+
+[下载配置](https://raw.githubusercontent.com/LUCIENIN/shadowrocket-cn-ru-west/main/Shadowrocket.conf) · [English guide](README.en.md) · [FAQ](FAQ.md) · [验证记录与限制](VERIFICATION.md)
+
+| 场景 | 示例 | 配置目标 | 需要用户完成 |
+|---|---|---|---|
+| 国内软件直连 | 网易云、抖音、微信、4PX | DIRECT | 更新远程专项规则并检查匹配 |
+| 俄罗斯服务 | Ozon、Mail.ru、VK、Yandex | RUSSIA | 加入并选定自己的俄罗斯节点 |
+| 北美业务 | amazon.com、amazon.ca | WEST-US | 加入并选定对应出口 |
+| 欧洲业务 | amazon.de、amazon.fr、amazon.co.uk | WEST-EU | 加入并选定对应出口 |
+| 全球服务 | ChatGPT、Google、GitHub、Telegram | GLOBAL | 选择可用的首页代理节点 |
+
+策略名表示分流意图，不能证明实际出口国家。此项目不提供节点，也未完成公开模板的客户端导入和地区出口实测。
 
 从个人使用场景整理的脱敏配置模板：国内软件直连，俄罗斯服务单独选出口，欧美业务分别选择策略组。没有节点、订阅、凭据或私人服务器信息。
 
